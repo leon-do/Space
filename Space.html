@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+			p{
+				line-height: 400%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p id=txt></p>
+	</body>
+
+</html>
+
+
+<script>
+var phrase = "Space can make you feel independent and/or isolated.";
+var phraseArray = phrase.split("");
+var text1 = "";
+var space = " ";
+
+for (var i = 0 ; i < phraseArray.length ; i++){
+	space = space + "\xa0";     //xa0 is Unicode for space
+	text1 = text1 + phraseArray[i] + space;
+}
+
+document.getElementById("txt").innerHTML = text1;
+
+</script>
